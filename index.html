@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>FeshoryAds | Global Digital Advertising Agency</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                primary: '#2563eb',
+                dark: '#1e293b',
+                light: '#f8fafc'
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif']
+            }
+          }
+        }
+      };
+    </script>
+    <style data-purpose="custom-layout">
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+      }
+
+      body {
+        min-height: 100vh;
+      }
+
+      .hero-gradient {
+        background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.05), transparent);
+      }
+
+      section[id] {
+        scroll-margin-top: 6rem;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white text-slate-900 font-sans antialiased">
+    <nav
+      class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100"
+      data-purpose="main-navigation"
+    >
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+          <div class="flex-shrink-0 flex items-center">
+            <span class="text-2xl font-bold tracking-tight text-brand-primary">FeshoryAds</span>
+          </div>
+          <div class="hidden md:flex space-x-10 items-center">
+            <a
+              class="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors"
+              href="#services"
+              >Services</a
+            >
+            <a
+              class="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors"
+              href="#about"
+              >Why Choose Us</a
+            >
+            <button
+              class="inline-flex items-center px-5 py-2.5 border border-transparent text-sm font-semibold rounded-lg text-white bg-brand-primary hover:bg-blue-700 transition-all"
+              data-open-contact="true"
+              type="button"
+            >
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      class="relative min-h-[92vh] flex items-center bg-white overflow-hidden hero-gradient mb-0"
+      data-purpose="hero"
+    >
+      <div class="max-w-[1280px] mx-auto px-6 lg:px-8 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-[5.5fr_4.5fr] gap-12 items-center">
+          <div class="flex flex-col items-start text-left z-10">
+            <span
+              class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-blue-50 text-brand-primary mb-4"
+            >
+              AI-Powered Growth Agency
+            </span>
+            <h1
+              class="text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-brand-dark leading-[1.1] mb-6"
+            >
+              Your AI Growth Agency for <br class="hidden xl:block" /> Paid Media, Creative, and
+              <br class="hidden xl:block" /> Organic
+              <span class="text-brand-primary">Growth</span>
+            </h1>
+            <p class="text-xl text-slate-600 leading-relaxed max-w-xl mb-7">
+              We help brands grow faster with AI-driven media buying, scalable creative production,
+              and full-funnel growth strategy across paid ads, ASO, and SEO.
+            </p>
+            <div class="flex flex-wrap gap-4 mb-10">
+              <button
+                class="px-8 py-4 bg-brand-primary text-white text-lg font-bold rounded-xl shadow-lg shadow-blue-500/20 hover:shadow-xl hover:-translate-y-0.5 transition-all"
+                data-open-contact="true"
+                type="button"
+              >
+                Book a Call
+              </button>
+              <a
+                class="px-8 py-4 bg-white border-2 border-slate-200 text-brand-dark text-lg font-bold rounded-xl hover:border-brand-primary hover:text-brand-primary transition-all"
+                href="#services"
+              >
+                View Services
+              </a>
+            </div>
+            <div class="flex flex-wrap items-center gap-6 pt-6 border-t border-slate-100">
+              <div class="flex items-center gap-2 text-[11px] font-black text-slate-400 tracking-widest">
+                <span class="material-symbols-outlined !text-lg text-brand-primary/60">insights</span>
+                PAID MEDIA
+              </div>
+              <div class="flex items-center gap-2 text-[11px] font-black text-slate-400 tracking-widest">
+                <span class="material-symbols-outlined !text-lg text-brand-primary/60"
+                  >auto_fix_high</span
+                >
+                AIGC CREATIVE
+              </div>
+              <div class="flex items-center gap-2 text-[11px] font-black text-slate-400 tracking-widest">
+                <span class="material-symbols-outlined !text-lg text-brand-primary/60"
+                  >rocket_launch</span
+                >
+                ASO/SEO
+              </div>
+            </div>
+          </div>
+
+          <div class="relative lg:block">
+            <div class="relative z-10 bg-slate-50 rounded-3xl border border-slate-200 shadow-2xl p-4">
+              <div class="flex items-center justify-between mb-4 px-2">
+                <div class="flex gap-1.5">
+                  <div class="w-2.5 h-2.5 rounded-full bg-red-400"></div>
+                  <div class="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
+                  <div class="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+                </div>
+                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                  AI Performance Monitor
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                  <div class="text-xs text-slate-500 mb-1">ROAS</div>
+                  <div class="text-2xl font-bold text-brand-primary">4.8x</div>
+                  <div class="mt-2 h-1 w-full bg-blue-50 rounded-full overflow-hidden">
+                    <div class="h-full bg-brand-primary w-4/5"></div>
+                  </div>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                  <div class="text-xs text-slate-500 mb-1">Conversion</div>
+                  <div class="text-2xl font-bold text-brand-dark">+32%</div>
+                  <div class="flex items-end gap-1 h-8 mt-2">
+                    <div class="w-full bg-slate-100 h-1/2 rounded-t-sm"></div>
+                    <div class="w-full bg-slate-100 h-2/3 rounded-t-sm"></div>
+                    <div class="w-full bg-brand-primary h-full rounded-t-sm"></div>
+                  </div>
+                </div>
+                <div class="col-span-2 bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                  <div class="flex justify-between items-center mb-4">
+                    <div class="text-xs font-bold text-slate-700">Creative Testing Flow</div>
+                    <span class="material-symbols-outlined text-sm text-slate-300">more_horiz</span>
+                  </div>
+                  <div class="flex gap-3 overflow-hidden">
+                    <div
+                      class="w-20 h-24 bg-slate-50 rounded-lg flex items-center justify-center border border-dashed border-slate-200"
+                    >
+                      <span class="material-symbols-outlined text-slate-300">add_photo_alternate</span>
+                    </div>
+                    <div
+                      class="w-20 h-24 bg-blue-50 rounded-lg flex items-center justify-center border border-blue-100"
+                    >
+                      <span class="material-symbols-outlined text-brand-primary">auto_awesome</span>
+                    </div>
+                    <div class="w-20 h-24 bg-slate-50 rounded-lg flex flex-col justify-end p-2">
+                      <div class="h-1 w-full bg-slate-200 rounded-full mb-1"></div>
+                      <div class="h-1 w-2/3 bg-slate-200 rounded-full"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="absolute -top-6 -right-6 w-32 h-32 bg-blue-100/50 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-blue-50 rounded-full blur-3xl"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-brand-light pt-0 pb-8" data-purpose="services-grid" id="services">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center">
+          <span class="block text-brand-primary text-sm font-bold tracking-widest uppercase mb-3"
+            >Our Expertise</span
+          >
+          <h2 class="text-4xl font-extrabold text-brand-dark">What We Do</h2>
+          <div class="w-12 h-1 bg-brand-primary mt-4 mx-auto"></div>
+          <p class="mt-6 text-slate-600 max-w-2xl mx-auto">
+            Comprehensive AI-powered marketing solutions designed to scale your business across every
+            digital touchpoint.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="bg-slate-50/50 p-7 rounded-[20px] border border-slate-200/60 border-t-2 border-t-blue-400/30 hover:border-brand-primary/40 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 shadow-sm min-h-[320px] flex flex-col"
+          >
+            <div
+              class="w-12 h-12 bg-blue-100 text-brand-primary rounded-xl flex items-center justify-center mb-[18px] shadow-inner flex-shrink-0"
+            >
+              <span class="material-symbols-outlined !text-[28px] font-medium">ads_click</span>
+            </div>
+            <h3 class="text-xl font-bold text-brand-dark mb-3">AI Media Buying</h3>
+            <p class="text-slate-600">
+              Performance advertising across Meta, Google, TikTok, and other key platforms powered by
+              data, automation, and fast iteration.
+            </p>
+          </div>
+          <div
+            class="bg-slate-50/50 p-7 rounded-[20px] border border-slate-200/60 border-t-2 border-t-blue-400/30 hover:border-brand-primary/40 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 shadow-sm min-h-[320px] flex flex-col"
+          >
+            <div
+              class="w-12 h-12 bg-blue-100 text-brand-primary rounded-xl flex items-center justify-center mb-[18px] shadow-inner flex-shrink-0"
+            >
+              <span class="material-symbols-outlined !text-[28px] font-medium">auto_awesome</span>
+            </div>
+            <h3 class="text-xl font-bold text-brand-dark mb-3">AIGC Creative Studio</h3>
+            <p class="text-slate-600">
+              Generate ad copy, hooks, scripts, static visuals, and video concepts at scale for rapid
+              testing and creative refresh.
+            </p>
+          </div>
+          <div
+            class="bg-slate-50/50 p-7 rounded-[20px] border border-slate-200/60 border-t-2 border-t-blue-400/30 hover:border-brand-primary/40 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 shadow-sm min-h-[320px] flex flex-col"
+          >
+            <div
+              class="w-12 h-12 bg-blue-100 text-brand-primary rounded-xl flex items-center justify-center mb-[18px] shadow-inner flex-shrink-0"
+            >
+              <span class="material-symbols-outlined !text-[28px] font-medium">app_shortcut</span>
+            </div>
+            <h3 class="text-xl font-bold text-brand-dark mb-3">ASO Optimization</h3>
+            <p class="text-slate-600">
+              Improve app store visibility and conversion through keyword strategy, listing
+              optimization, screenshots, and experiment planning.
+            </p>
+          </div>
+          <div
+            class="bg-slate-50/50 p-7 rounded-[20px] border border-slate-200/60 border-t-2 border-t-blue-400/30 hover:border-brand-primary/40 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 shadow-sm min-h-[320px] flex flex-col"
+          >
+            <div
+              class="w-12 h-12 bg-blue-100 text-brand-primary rounded-xl flex items-center justify-center mb-[18px] shadow-inner flex-shrink-0"
+            >
+              <span class="material-symbols-outlined !text-[28px] font-medium">search</span>
+            </div>
+            <h3 class="text-xl font-bold text-brand-dark mb-3">SEO Growth</h3>
+            <p class="text-slate-600">
+              Build long-term organic traffic with content strategy, on-page SEO, keyword research,
+              and landing page optimization.
+            </p>
+          </div>
+          <div
+            class="bg-slate-50/50 p-7 rounded-[20px] border border-slate-200/60 border-t-2 border-t-blue-400/30 hover:border-brand-primary/40 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 shadow-sm min-h-[320px] flex flex-col"
+          >
+            <div
+              class="w-12 h-12 bg-blue-100 text-brand-primary rounded-xl flex items-center justify-center mb-[18px] shadow-inner flex-shrink-0"
+            >
+              <span class="material-symbols-outlined !text-[28px] font-medium">language</span>
+            </div>
+            <h3 class="text-xl font-bold text-brand-dark mb-3">Localization &amp; Market Expansion</h3>
+            <p class="text-slate-600">
+              Adapt campaigns, creatives, and messaging for different markets with local insight and
+              multilingual execution.
+            </p>
+          </div>
+          <div
+            class="bg-slate-50/50 p-7 rounded-[20px] border border-slate-200/60 border-t-2 border-t-blue-400/30 hover:border-brand-primary/40 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 shadow-sm min-h-[320px] flex flex-col"
+          >
+            <div
+              class="w-12 h-12 bg-blue-100 text-brand-primary rounded-xl flex items-center justify-center mb-[18px] shadow-inner flex-shrink-0"
+            >
+              <span class="material-symbols-outlined !text-[28px] font-medium">bar_chart</span>
+            </div>
+            <h3 class="text-xl font-bold text-brand-dark mb-3">Growth Analytics</h3>
+            <p class="text-slate-600">
+              Track CAC, ROAS, retention, funnel conversion, and creative performance with reporting
+              built for fast decision-making.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24" data-purpose="why-choose-us" id="about">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <span class="block text-brand-primary text-sm font-bold tracking-widest uppercase mb-3"
+              >The AI Advantage</span
+            >
+            <h2 class="text-4xl lg:text-5xl font-extrabold text-brand-dark leading-tight mb-6">
+              Why Brands Choose Our AI Growth Team
+            </h2>
+            <div class="w-12 h-1 bg-brand-primary mb-8"></div>
+            <p class="text-lg text-slate-600 mb-10 leading-relaxed">
+              We blend cutting-edge technology with human expertise to deliver results that traditional
+              agencies can't match. Our AI-driven approach ensures faster scaling, smarter spending,
+              and creative excellence.
+            </p>
+            <div class="space-y-6">
+              <div
+                class="flex gap-5 p-6 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div
+                  class="flex-shrink-0 w-12 h-12 bg-blue-50 text-brand-primary rounded-xl flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined">analytics</span>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-brand-dark mb-1">Smarter Media Buying with AI</h4>
+                  <p class="text-slate-600 text-sm">
+                    AI-powered analysis to optimize targeting, bidding, and budget allocation faster than
+                    humans alone.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex gap-5 p-6 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div
+                  class="flex-shrink-0 w-12 h-12 bg-blue-50 text-brand-primary rounded-xl flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined">auto_fix_high</span>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-brand-dark mb-1">High-Volume Creative Production</h4>
+                  <p class="text-slate-600 text-sm">
+                    AIGC workflows to produce more assets, test faster, and eliminate creative bottlenecks
+                    at scale.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex gap-5 p-6 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div
+                  class="flex-shrink-0 w-12 h-12 bg-blue-50 text-brand-primary rounded-xl flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined">layers</span>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-brand-dark mb-1">Full-Stack Growth Execution</h4>
+                  <p class="text-slate-600 text-sm">
+                    Supporting ASO, SEO, and CRO to improve performance across the entire marketing funnel.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="bg-slate-900 rounded-[2.5rem] p-8 shadow-2xl overflow-hidden">
+              <div class="flex items-center justify-between mb-8 border-b border-slate-800 pb-4">
+                <div class="text-white font-bold text-sm tracking-widest uppercase">Growth Engine 2.0</div>
+                <div class="flex gap-1.5">
+                  <div class="w-2 h-2 rounded-full bg-slate-700"></div>
+                  <div class="w-2 h-2 rounded-full bg-slate-700"></div>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="bg-white/5 border border-white/10 p-5 rounded-2xl">
+                  <div class="text-blue-400 text-xs font-bold mb-1 uppercase">Efficiency</div>
+                  <div class="text-3xl font-bold text-white tracking-tight">+145%</div>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-5 rounded-2xl">
+                  <div class="text-emerald-400 text-xs font-bold mb-1 uppercase">Scale</div>
+                  <div class="text-3xl font-bold text-white tracking-tight">3.4x</div>
+                </div>
+              </div>
+              <div
+                class="bg-gradient-to-br from-brand-primary/20 to-blue-600/20 border border-brand-primary/30 p-6 rounded-3xl relative overflow-hidden"
+              >
+                <div class="flex flex-col gap-4 relative z-10">
+                  <div class="flex items-center gap-4">
+                    <div class="w-8 h-8 rounded-full bg-brand-primary flex items-center justify-center">
+                      <span class="material-symbols-outlined text-white text-sm">bolt</span>
+                    </div>
+                    <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+                      <div class="h-full bg-brand-primary w-full animate-pulse"></div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <div class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center">
+                      <span class="material-symbols-outlined text-white text-sm">monitoring</span>
+                    </div>
+                    <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+                      <div class="h-full bg-emerald-500 w-[85%]"></div>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <div class="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center">
+                      <span class="material-symbols-outlined text-white text-sm">psychology</span>
+                    </div>
+                    <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+                      <div class="h-full bg-purple-500 w-[92%]"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="absolute -right-4 -bottom-4 w-32 h-32 bg-brand-primary/20 rounded-full blur-2xl"></div>
+              </div>
+              <div class="mt-6 p-4 border border-slate-800 rounded-2xl flex items-center justify-between">
+                <div class="text-slate-400 text-xs">AI Optimization active</div>
+                <div class="flex gap-1">
+                  <span class="w-1 h-1 bg-brand-primary rounded-full animate-ping"></span>
+                  <span class="text-brand-primary text-[10px] font-bold uppercase">Live</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-primary/10 rounded-full blur-[100px]"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#0f172a] text-white py-16 relative overflow-hidden" id="process">
+      <div
+        class="absolute inset-0 opacity-[0.05] pointer-events-none"
+        style="background-image: linear-gradient(#2563eb 0.5px, transparent 0.5px), linear-gradient(90deg, #2563eb 0.5px, transparent 0.5px); background-size: 40px 40px;"
+      ></div>
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-primary/5 rounded-full blur-[120px] pointer-events-none"
+      ></div>
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16">
+          <span class="block text-brand-primary text-sm font-black tracking-[0.2em] uppercase mb-4"
+            >Methodology</span
+          >
+          <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">How We Drive Growth</h2>
+          <div class="w-20 h-1.5 bg-brand-primary mx-auto rounded-full"></div>
+          <p class="mt-8 text-slate-300 text-lg max-w-2xl mx-auto leading-relaxed">
+            A systematic, data-driven approach to identify, execute, and scale high-impact growth
+            opportunities.
+          </p>
+        </div>
+        <div class="relative">
+          <div class="absolute top-10 left-0 right-0 h-1 bg-slate-700/50 hidden md:block">
+            <div class="h-full bg-brand-primary w-full opacity-30 shadow-[0_0_15px_rgba(37,99,235,0.5)]"></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative z-10">
+            <div
+              class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl flex flex-col items-center text-center hover:bg-white/10 transition-all duration-300"
+            >
+              <div
+                class="w-20 h-20 bg-brand-primary rounded-full flex items-center justify-center mb-6 font-black text-2xl shadow-[0_0_30px_rgba(37,99,235,0.3)] border-4 border-[#0f172a] relative z-20"
+              >
+                1
+              </div>
+              <h4 class="text-2xl font-black mb-4">Diagnose</h4>
+              <p class="text-slate-200 text-base leading-relaxed">
+                We audit your acquisition funnel, creatives, tracking, and growth opportunities.
+              </p>
+            </div>
+            <div
+              class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl flex flex-col items-center text-center hover:bg-white/10 transition-all duration-300"
+            >
+              <div
+                class="w-20 h-20 bg-brand-primary rounded-full flex items-center justify-center mb-6 font-black text-2xl shadow-[0_0_30px_rgba(37,99,235,0.3)] border-4 border-[#0f172a] relative z-20"
+              >
+                2
+              </div>
+              <h4 class="text-2xl font-black mb-4">Generate</h4>
+              <p class="text-slate-200 text-base leading-relaxed">
+                We build scalable ad concepts, AIGC creatives, landing page ideas, and channel
+                strategies.
+              </p>
+            </div>
+            <div
+              class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl flex flex-col items-center text-center hover:bg-white/10 transition-all duration-300"
+            >
+              <div
+                class="w-20 h-20 bg-brand-primary rounded-full flex items-center justify-center mb-6 font-black text-2xl shadow-[0_0_30px_rgba(37,99,235,0.3)] border-4 border-[#0f172a] relative z-20"
+              >
+                3
+              </div>
+              <h4 class="text-2xl font-black mb-4">Launch</h4>
+              <p class="text-slate-200 text-base leading-relaxed">
+                We execute campaigns across paid, ASO, SEO, and testing workflows.
+              </p>
+            </div>
+            <div
+              class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl flex flex-col items-center text-center hover:bg-white/10 transition-all duration-300"
+            >
+              <div
+                class="w-20 h-20 bg-brand-primary rounded-full flex items-center justify-center mb-6 font-black text-2xl shadow-[0_0_30px_rgba(37,99,235,0.3)] border-4 border-[#0f172a] relative z-20"
+              >
+                4
+              </div>
+              <h4 class="text-2xl font-black mb-4">Optimize</h4>
+              <p class="text-slate-200 text-base leading-relaxed">
+                We continuously analyze performance and improve results with fast iteration loops.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-24 border-t border-slate-50" id="partnership">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <span
+              class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-blue-50 text-brand-primary mb-6"
+            >
+              Partnership
+            </span>
+            <h2 class="text-4xl lg:text-5xl font-extrabold text-brand-dark tracking-tight mb-6">
+              Built for Growth-Focused Teams
+            </h2>
+            <p class="text-lg text-slate-600 leading-relaxed max-w-xl">
+              Whether you're scaling an app, launching into new markets, or trying to improve paid
+              efficiency, we help teams move faster with stronger creative, clearer data, and smarter
+              execution.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-6">
+            <div
+              class="p-8 bg-slate-50 border border-slate-100 rounded-[20px] shadow-sm flex flex-col items-start gap-4 hover:shadow-md transition-shadow"
+            >
+              <div
+                class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-brand-primary shadow-sm"
+              >
+                <span class="material-symbols-outlined !text-2xl">smartphone</span>
+              </div>
+              <span class="font-bold text-brand-dark">Mobile Apps</span>
+            </div>
+            <div
+              class="p-8 bg-slate-50 border border-slate-100 rounded-[20px] shadow-sm flex flex-col items-start gap-4 hover:shadow-md transition-shadow"
+            >
+              <div
+                class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-brand-primary shadow-sm"
+              >
+                <span class="material-symbols-outlined !text-2xl">shopping_cart</span>
+              </div>
+              <span class="font-bold text-brand-dark">E-commerce</span>
+            </div>
+            <div
+              class="p-8 bg-slate-50 border border-slate-100 rounded-[20px] shadow-sm flex flex-col items-start gap-4 hover:shadow-md transition-shadow"
+            >
+              <div
+                class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-brand-primary shadow-sm"
+              >
+                <span class="material-symbols-outlined !text-2xl">cloud_done</span>
+              </div>
+              <span class="font-bold text-brand-dark">SaaS &amp; Digital</span>
+            </div>
+            <div
+              class="p-8 bg-slate-50 border border-slate-100 rounded-[20px] shadow-sm flex flex-col items-start gap-4 hover:shadow-md transition-shadow"
+            >
+              <div
+                class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-brand-primary shadow-sm"
+              >
+                <span class="material-symbols-outlined !text-2xl">public</span>
+              </div>
+              <span class="font-bold text-brand-dark">Global Expansion</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-brand-light py-24" id="deliverables">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span class="block text-brand-primary text-sm font-bold tracking-widest uppercase mb-3"
+            >Deliverables</span
+          >
+          <h2 class="text-4xl font-extrabold text-brand-dark mb-6">What You Get</h2>
+          <p class="mt-6 text-slate-600 max-w-2xl mx-auto text-lg">
+            Tangible outcomes and strategic advantages that propel your brand forward in a competitive
+            landscape.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          <div class="flex items-start gap-4 p-4">
+            <span class="material-symbols-outlined text-brand-primary !text-2xl mt-0.5"
+              >check_circle</span
+            >
+            <p class="text-lg font-bold text-brand-dark leading-tight">Lower creative production costs</p>
+          </div>
+          <div class="flex items-start gap-4 p-4">
+            <span class="material-symbols-outlined text-brand-primary !text-2xl mt-0.5"
+              >check_circle</span
+            >
+            <p class="text-lg font-bold text-brand-dark leading-tight">Faster testing cycles</p>
+          </div>
+          <div class="flex items-start gap-4 p-4">
+            <span class="material-symbols-outlined text-brand-primary !text-2xl mt-0.5"
+              >check_circle</span
+            >
+            <p class="text-lg font-bold text-brand-dark leading-tight">Smarter budget allocation</p>
+          </div>
+          <div class="flex items-start gap-4 p-4">
+            <span class="material-symbols-outlined text-brand-primary !text-2xl mt-0.5"
+              >check_circle</span
+            >
+            <p class="text-lg font-bold text-brand-dark leading-tight">Better paid performance</p>
+          </div>
+          <div class="flex items-start gap-4 p-4">
+            <span class="material-symbols-outlined text-brand-primary !text-2xl mt-0.5"
+              >check_circle</span
+            >
+            <p class="text-lg font-bold text-brand-dark leading-tight">Stronger organic visibility</p>
+          </div>
+          <div class="flex items-start gap-4 p-4">
+            <span class="material-symbols-outlined text-brand-primary !text-2xl mt-0.5"
+              >check_circle</span
+            >
+            <p class="text-lg font-bold text-brand-dark leading-tight">Clearer growth reporting</p>
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden rounded-[32px] bg-gradient-to-r from-blue-600 to-brand-primary p-12 lg:p-16 shadow-2xl shadow-blue-500/20 text-center"
+        >
+          <div class="relative z-10">
+            <h3 class="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-[1.2]">
+              More creatives. Faster experiments. <br class="hidden lg:block" /> Better decisions.
+              Stronger growth.
+            </h3>
+          </div>
+          <div class="absolute top-0 right-0 -mt-12 -mr-12 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+          <div class="absolute bottom-0 left-0 -mb-12 -ml-12 w-64 h-64 bg-blue-400/20 rounded-full blur-3xl"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-brand-primary text-white py-10">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold mb-6">Ready to Grow with an AI-Driven Team?</h2>
+        <p class="text-xl opacity-90 mb-10">
+          Whether you need performance marketing, scalable creatives, or full-stack growth support, we
+          can help you build a faster and smarter growth engine.
+        </p>
+        <button
+          class="inline-block px-10 py-4 bg-white text-brand-primary font-bold text-lg rounded-xl hover:bg-blue-50 transition-colors shadow-lg"
+          data-open-contact="true"
+          type="button"
+        >
+          Book a Call
+        </button>
+      </div>
+    </section>
+
+    <div
+      aria-hidden="true"
+      class="fixed inset-0 z-[100] hidden items-center justify-center bg-slate-950/60 px-6"
+      data-contact-modal="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="contact-modal-title"
+    >
+      <div class="w-full max-w-md rounded-3xl bg-white p-8 shadow-2xl">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-[0.2em] text-brand-primary">Contact</p>
+            <h3 class="mt-2 text-2xl font-extrabold text-brand-dark" id="contact-modal-title">
+              Reach FeshoryAds
+            </h3>
+          </div>
+          <button
+            aria-label="Close contact dialog"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-slate-500 transition-colors hover:bg-slate-200 hover:text-slate-700"
+            data-close-contact="true"
+            type="button"
+          >
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <p class="mt-4 text-slate-600">
+          For business inquiries, partnerships, or campaign discussions, email us directly.
+        </p>
+        <a
+          class="mt-6 block rounded-2xl border border-blue-100 bg-blue-50 px-5 py-4 text-lg font-bold text-brand-primary transition-colors hover:bg-blue-100"
+          href="mailto:bd@feshoryads.cn"
+        >
+          bd@feshoryads.cn
+        </a>
+        <p class="mt-4 text-sm text-slate-500">
+          We mainly collect your email address when you contact us.
+        </p>
+      </div>
+    </div>
+
+    <footer class="bg-brand-dark text-white py-8" data-purpose="footer">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-slate-700/50 pb-12">
+          <div class="col-span-1 md:col-span-2">
+            <span class="text-2xl font-bold tracking-tight text-white mb-6 block">FeshoryAds</span>
+            <p class="text-slate-400 max-w-sm leading-relaxed">
+              Leading the way in global digital advertising. We simplify the complexity of international
+              markets.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white mb-6 uppercase tracking-wider text-xs">Navigation</h4>
+            <ul class="space-y-4">
+              <li><a class="text-slate-400 hover:text-white transition-colors" href="#services">Services</a></li>
+              <li><a class="text-slate-400 hover:text-white transition-colors" href="#about">Why Choose Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white mb-6 uppercase tracking-wider text-xs">Legal</h4>
+            <ul class="space-y-4">
+              <li>
+                <a class="text-slate-400 hover:text-white transition-colors" href="./privacy-policy.html"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="pt-8 text-center md:text-left">
+          <p class="text-sm text-slate-500">© 2023 FeshoryAds. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const contactModal = document.querySelector('[data-contact-modal="true"]');
+      const openContactButtons = document.querySelectorAll('[data-open-contact="true"]');
+      const closeContactButtons = document.querySelectorAll('[data-close-contact="true"]');
+
+      const openContactModal = () => {
+        if (!contactModal) return;
+        contactModal.classList.remove('hidden');
+        contactModal.classList.add('flex');
+        contactModal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('overflow-hidden');
+      };
+
+      const closeContactModal = () => {
+        if (!contactModal) return;
+        contactModal.classList.add('hidden');
+        contactModal.classList.remove('flex');
+        contactModal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('overflow-hidden');
+      };
+
+      openContactButtons.forEach((button) => {
+        button.addEventListener('click', openContactModal);
+      });
+
+      closeContactButtons.forEach((button) => {
+        button.addEventListener('click', closeContactModal);
+      });
+
+      if (contactModal) {
+        contactModal.addEventListener('click', (event) => {
+          if (event.target === contactModal) {
+            closeContactModal();
+          }
+        });
+      }
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeContactModal();
+        }
+      });
+    </script>
+  </body>
+</html>

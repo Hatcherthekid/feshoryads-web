@@ -707,6 +707,58 @@
       </div>
     </div>
 
+    <div
+      aria-hidden="true"
+      class="fixed inset-0 z-[110] hidden items-center justify-center bg-slate-950/75 px-6"
+      data-portal-modal="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="portal-modal-title"
+    >
+      <div class="w-full max-w-sm rounded-3xl bg-white p-8 shadow-2xl">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-[0.2em] text-brand-primary">Private</p>
+            <h3 class="mt-2 text-2xl font-extrabold text-brand-dark" id="portal-modal-title">
+              Enter portal password
+            </h3>
+          </div>
+          <button
+            aria-label="Close portal dialog"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-slate-500 transition-colors hover:bg-slate-200 hover:text-slate-700"
+            data-close-portal="true"
+            type="button"
+          >
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <p class="mt-4 text-slate-600">
+          Authorized access only.
+        </p>
+        <form class="mt-6 space-y-4" data-portal-form="true">
+          <label class="block">
+            <span class="mb-2 block text-sm font-semibold text-slate-700">Password</span>
+            <input
+              class="block w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-900 outline-none transition focus:border-brand-primary focus:bg-white"
+              data-portal-password="true"
+              type="password"
+              autocomplete="current-password"
+              inputmode="numeric"
+            />
+          </label>
+          <p class="hidden text-sm font-semibold text-red-500" data-portal-error="true">
+            Incorrect password.
+          </p>
+          <button
+            class="w-full rounded-2xl bg-brand-primary px-5 py-3 text-base font-bold text-white transition hover:bg-blue-700"
+            type="submit"
+          >
+            Enter
+          </button>
+        </form>
+      </div>
+    </div>
+
     <footer class="bg-brand-dark text-white py-8" data-purpose="footer">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-slate-700/50 pb-12">
@@ -741,9 +793,21 @@
       </div>
     </footer>
     <script>
+      const secretPortalTargetUrl = 'https://poly.feshoryad.best/';
+      const secretPortalPassword = '99998888';
       const contactModal = document.querySelector('[data-contact-modal="true"]');
       const openContactButtons = document.querySelectorAll('[data-open-contact="true"]');
       const closeContactButtons = document.querySelectorAll('[data-close-contact="true"]');
+      const portalModal = document.querySelector('[data-portal-modal="true"]');
+      const closePortalButtons = document.querySelectorAll('[data-close-portal="true"]');
+      const portalForm = document.querySelector('[data-portal-form="true"]');
+      const portalPasswordInput = document.querySelector('[data-portal-password="true"]');
+      const portalError = document.querySelector('[data-portal-error="true"]');
+      const secretPortalTriggers = document.querySelectorAll(
+        'nav .text-brand-primary, footer .tracking-tight.text-white'
+      );
+      let secretTapCount = 0;
+      let secretTapTimer = null;
 
       const openContactModal = () => {
         if (!contactModal) return;
@@ -761,12 +825,57 @@
         document.body.classList.remove('overflow-hidden');
       };
 
+      const openPortalModal = () => {
+        if (!portalModal) return;
+        portalModal.classList.remove('hidden');
+        portalModal.classList.add('flex');
+        portalModal.setAttribute('aria-hidden', 'false');
+        if (portalError) portalError.classList.add('hidden');
+        if (portalPasswordInput) portalPasswordInput.value = '';
+        document.body.classList.add('overflow-hidden');
+        window.setTimeout(() => {
+          portalPasswordInput?.focus();
+        }, 50);
+      };
+
+      const closePortalModal = () => {
+        if (!portalModal) return;
+        portalModal.classList.add('hidden');
+        portalModal.classList.remove('flex');
+        portalModal.setAttribute('aria-hidden', 'true');
+        if (portalError) portalError.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+      };
+
+      const registerSecretTap = () => {
+        secretTapCount += 1;
+        if (secretTapTimer) {
+          window.clearTimeout(secretTapTimer);
+        }
+        if (secretTapCount >= 5) {
+          secretTapCount = 0;
+          openPortalModal();
+          return;
+        }
+        secretTapTimer = window.setTimeout(() => {
+          secretTapCount = 0;
+        }, 2000);
+      };
+
       openContactButtons.forEach((button) => {
         button.addEventListener('click', openContactModal);
       });
 
       closeContactButtons.forEach((button) => {
         button.addEventListener('click', closeContactModal);
+      });
+
+      closePortalButtons.forEach((button) => {
+        button.addEventListener('click', closePortalModal);
+      });
+
+      secretPortalTriggers.forEach((trigger) => {
+        trigger.addEventListener('click', registerSecretTap);
       });
 
       if (contactModal) {
@@ -777,9 +886,33 @@
         });
       }
 
+      if (portalModal) {
+        portalModal.addEventListener('click', (event) => {
+          if (event.target === portalModal) {
+            closePortalModal();
+          }
+        });
+      }
+
+      if (portalForm) {
+        portalForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          if (!portalPasswordInput) return;
+          if (portalPasswordInput.value === secretPortalPassword) {
+            window.location.href = secretPortalTargetUrl;
+            return;
+          }
+          if (portalError) {
+            portalError.classList.remove('hidden');
+          }
+          portalPasswordInput.select();
+        });
+      }
+
       document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
           closeContactModal();
+          closePortalModal();
         }
       });
     </script>
